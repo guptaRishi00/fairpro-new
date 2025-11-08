@@ -6,9 +6,15 @@ type Props = {};
 
 export default function Herosection({}: Props) {
   return (
-    <div className="lg:h-[900px] bg-[#7E052A] h-[1000px]  w-full bg-[url('/background.png')] relative bg-cover overflow-hidden">
-      <div className="w-full flex items-center justify-center  lg:py-0">
-        <Image src="/logo2.png" alt="" width={400} height={400} className="" />
+    <div className="lg:h-[900px] bg-[#7E052A] h-[1000px] w-full bg-[url('/background.png')] relative bg-cover overflow-hidden">
+      <div className="w-full flex items-center justify-center mb-10 lg:mb-0 lg:py-0">
+        <Image
+          src="/logo2.png"
+          alt=""
+          width={400}
+          height={400}
+          className="lg:w-[390px] w-[300px]"
+        />
       </div>
 
       <div className="lg:flex lg:flex-row flex-col items-center justify-center lg:items-start lg:justify-between lg:-translate-y-40 lg:px-10 px-4 pb-16 lg:pb-0 gap-8">
@@ -65,10 +71,10 @@ export default function Herosection({}: Props) {
         <div className="relative bottom-0 z-10  -translate-y-18 lg:translate-y-6.5 w-full max-w-sm md:max-w-md lg:max-w-none">
           <Image
             alt="ll"
-            src="/person1.png"
+            src="/person2.png"
             width={1000}
             height={1000}
-            className="w-70 lg:w-[600px] lg:h-full"
+            className="w-full lg:w-[700px] lg:-translate-y-50 lg:h-full"
           />
         </div>
       </div>

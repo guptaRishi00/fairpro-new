@@ -9,7 +9,7 @@ export default function Value() {
         Desktop: flex-row, items-end, h-[550px]
       */}
       <div className="bg-[#890B31] w-full flex flex-col lg:flex-row items-center lg:items-end h-auto lg:h-[550px] relative">
-        <div className="w-full">
+        <div className="w-full hidden lg:inline-block">
           <Image
             src="/building.png"
             alt="Tamil Nadu Temple at Sunset"

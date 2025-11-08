@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ExclusiveOpportunity: React.FC = () => {
   return (
-    <div className="bg-[#FFF8F1] py-10 px-4 sm:px-6 lg:px-8 overflow-visible mt-20">
+    <div className="bg-[#FFF8F1] py-10 px-4 sm:px-6 lg:px-8 overflow-visible lg:mt-20">
       <div className="max-w-6xl h-[500px] mx-auto relative overflow-visible">
         <div className="bg-linear-to-r from-[#8b1538] to-[#6b1530] rounded-3xl shadow-2xl overflow-visible relative">
           <div className="grid lg:grid-cols-2 gap-0 items-center overflow-visible">
@@ -48,7 +48,7 @@ const ExclusiveOpportunity: React.FC = () => {
                 alt="Business Professional"
                 width={1000}
                 height={1000}
-                className="object-contain pointer-events-none hidden lg:inline-block absolute bottom-[0px] right-[-140px] w-[800px] lg:w-[900px]"
+                className="object-contain pointer-events-none hidden lg:inline-block absolute bottom-0 right-[-140px] w-[800px] lg:w-[900px]"
                 priority
               />
             </div>
