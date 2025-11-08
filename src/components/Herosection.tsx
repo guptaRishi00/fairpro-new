@@ -8,7 +8,7 @@ export default function Herosection({}: Props) {
   return (
     <div className="lg:h-[900px] bg-[#7E052A] h-[1000px]  w-full bg-[url('/background.png')] relative bg-cover overflow-hidden">
       <div className="w-full flex items-center justify-center  lg:py-0">
-        <Image src="/logo.png" alt="" width={400} height={400} className="" />
+        <Image src="/logo2.png" alt="" width={400} height={400} className="" />
       </div>
 
       <div className="lg:flex lg:flex-row flex-col items-center justify-center lg:items-start lg:justify-between lg:-translate-y-40 lg:px-10 px-4 pb-16 lg:pb-0 gap-8">

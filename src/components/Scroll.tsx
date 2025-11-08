@@ -9,7 +9,7 @@ export default function Scroll() {
           "Join Us at LE MERIDIEN DUBAI HOTEL & CONFERENCE CENTRE, Dubai — 29–30 November 2025 |Your Gateway to Tamil Nadu’s Real Estate Future",
         ]}
         velocity={100}
-        className="text-2xl text-[#81072C]"
+        className="text-2xl text-[#81072C] lg:-translate-y-2"
       />
     </div>
   );
