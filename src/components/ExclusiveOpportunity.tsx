@@ -6,7 +6,7 @@ const ExclusiveOpportunity: React.FC = () => {
   return (
     <div className="bg-[#FFF8F1] py-10 px-4 sm:px-6 lg:px-8 overflow-visible mt-20">
       <div className="max-w-6xl h-[500px] mx-auto relative overflow-visible">
-        <div className="bg-gradient-to-r from-[#8b1538] to-[#6b1530] rounded-3xl shadow-2xl overflow-visible relative">
+        <div className="bg-linear-to-r from-[#8b1538] to-[#6b1530] rounded-3xl shadow-2xl overflow-visible relative">
           <div className="grid lg:grid-cols-2 gap-0 items-center overflow-visible">
             {/* Left - Content */}
             <div className="p-8 md:p-12 text-white z-10 relative">

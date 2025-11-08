@@ -8,6 +8,7 @@ import Opportunities from "@/components/Opportunities";
 import Register from "@/components/Register";
 import Scroll from "@/components/Scroll";
 import Trust from "@/components/Trust";
+import Value from "@/components/Value";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Discover />
       <AboutCredai />
       <Attend />
+      <Value />
       <ExclusiveOpportunity />
       <Footer />
     </div>
