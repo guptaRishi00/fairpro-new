@@ -3,14 +3,14 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function Trust() {
   return (
-    <div className="bg-[#890B31] w-full h-auto lg:h-[639px] p-6 lg:px-10 lg:mt-10 flex flex-col lg:flex-row lg:gap-20 items-center justify-between">
-      <div className="relative z-5 -translate-y-3">
+    <div className="bg-[#890B31] w-full h-auto lg:h-[639px] p-6 lg:px-10 lg:mt-10 flex flex-col lg:flex-row lg:gap-10 items-center justify-between">
+      <div className="hidden lg:inline-block relative z-5 -translate-y-3">
         <Image
           alt="ll"
-          src="/trust.png"
+          src="/trust2.png"
           width={200}
           height={200}
-          className="w-[510px] h-auto "
+          className="w-[770px] h-auto "
         />
       </div>
 
@@ -19,7 +19,7 @@ export default function Trust() {
           TRUSTWORTHINESS
         </p>
 
-        <h2 className="text-3xl sm:text-4xl text-white md:text-5xl font-extrabold leading-snug mb-4">
+        <h2 className="text-3xl sm:text-4xl text-white md:text-5xl font-extrabold mb-4">
           We Value Your Trust <br className="hidden sm:block" /> And Investment
         </h2>
 
