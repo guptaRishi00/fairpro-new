@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
+import Link from "next/link";
 
 const AboutCredai: React.FC = () => {
   return (
@@ -52,12 +53,18 @@ const AboutCredai: React.FC = () => {
               </div>
 
               <div className="w-full flex items-center mt-5">
-                <button className="bg-[#FBF9F1] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base">
+                <Link
+                  href={"https://www.credaitamilnadu.org/"}
+                  className="bg-[#FBF9F1] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base"
+                >
                   Vist our website
-                </button>
-                <span className="bg-[#FBF9F1] p-4 -ml-2 rounded-full border border-[#890B31]">
+                </Link>
+                <Link
+                  href={"https://www.credaitamilnadu.org/"}
+                  className="bg-[#FBF9F1] p-4 -ml-2 rounded-full border border-[#890B31]"
+                >
                   <MdArrowOutward color="#890B31" />
-                </span>
+                </Link>
               </div>
             </div>
           </div>

@@ -49,13 +49,13 @@ export default function Herosection({}: Props) {
             {/* - Added default padding 'px-5 py-3' and 'text-base' for mobile.
              */}
             <Link
-              href="/"
+              href="#register-form"
               className="bg-[#FFE0BA] text-[#890B31] font-semibold px-5 py-3 rounded-full text-base"
             >
               Register Now
             </Link>
             <Link
-              href="/"
+              href="#register-form"
               className="bg-[#FFE0BA] p-3 rounded-full lg:-translate-x-3"
             >
               <MdArrowOutward color="#890B31" size={20} />

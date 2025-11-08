@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function Opportunities() {
@@ -43,9 +44,12 @@ export default function Opportunities() {
         </div>
 
         <div className="w-full flex items-center">
-          <button className=" border border-[#890B31] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base">
+          <Link
+            href={"https://www.credaitamilnadu.org/"}
+            className=" border border-[#890B31] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base"
+          >
             Get Your Free VIP Pass
-          </button>
+          </Link>
           <span className="bg-[#890B31] p-4 -ml-2 rounded-full">
             <MdArrowOutward color="white" />
           </span>

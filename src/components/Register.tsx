@@ -80,7 +80,10 @@ export default function Register() {
   };
 
   return (
-    <section className="w-full bg-[#FFF8F1] py-12 md:py-20 px-4 md:px-10 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
+    <section
+      id="register-form"
+      className="w-full bg-[#FFF8F1] py-12 md:py-20 px-4 md:px-10 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16"
+    >
       <div className="relative w-full flex justify-center">
         <Image
           alt="main"

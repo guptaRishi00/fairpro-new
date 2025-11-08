@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
+import Link from "next/link";
 
 const ExclusiveOpportunity: React.FC = () => {
   return (
@@ -25,12 +26,18 @@ const ExclusiveOpportunity: React.FC = () => {
               </p>
 
               <div className="w-full flex justify-start items-center">
-                <button className="bg-[#FBF9F1] border border-[#890B31] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base">
+                <Link
+                  href={"https://www.credaitamilnadu.org/"}
+                  className="bg-[#FBF9F1] border border-[#890B31] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base"
+                >
                   View our main website
-                </button>
-                <span className="bg-[#FBF9F1] p-4 -ml-2 rounded-full border border-[#890B31]">
+                </Link>
+                <Link
+                  href={"https://www.credaitamilnadu.org/"}
+                  className="bg-[#FBF9F1] p-4 -ml-2 rounded-full border border-[#890B31]"
+                >
                   <MdArrowOutward color="#890B31" />
-                </span>
+                </Link>
               </div>
             </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function Trust() {
@@ -29,9 +30,12 @@ export default function Trust() {
         </p>
 
         <div className="w-full flex items-center">
-          <button className="bg-[#FBF9F1] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base">
+          <Link
+            href={"https://www.credaitamilnadu.org/"}
+            className="bg-[#FBF9F1] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base"
+          >
             Explore Builders
-          </button>
+          </Link>
           <span className="bg-[#FBF9F1] p-4 -ml-2 rounded-full border border-[#890B31]">
             <MdArrowOutward color="#890B31" />
           </span>
