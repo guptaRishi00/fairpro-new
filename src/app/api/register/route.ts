@@ -8,8 +8,10 @@ export async function POST(request: Request) {
     params.append("user_phone", formData.get("user_phone") as string);
     params.append("utmsource", formData.get("utmsource") as string);
 
+    // --- THIS IS YOUR NEW, UPDATED URL ---
     const SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbznKVf9QUBNVel3_PZj_kQ-BOe-T6kads83lBAmzR_7lXLP0lDWqxIk8ebqvT42Lrvq/exec";
+      "https://script.google.com/macros/s/AKfycbyUwsRpf5ajDzJgccf38OvVGNF6wfxzyXkZumQJ4Usr_0QmWMVaM6RgwDP7M6AZVyT6fg/exec";
+    // -------------------------------------
 
     const res = await fetch(SCRIPT_URL, {
       method: "POST",
