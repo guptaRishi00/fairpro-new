@@ -21,6 +21,8 @@ export async function POST(request: Request) {
       body: params.toString(), // ✅ Convert URLSearchParams to string
     });
 
+    console.log("response", res);
+
     const text = await res.text();
     let data;
 
@@ -29,6 +31,8 @@ export async function POST(request: Request) {
     } catch {
       data = { result: "unknown", raw: text };
     }
+
+    console.log(data);
 
     return new Response(JSON.stringify(data), {
       headers: { "Content-Type": "application/json" },
