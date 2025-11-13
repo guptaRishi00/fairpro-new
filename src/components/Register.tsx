@@ -158,24 +158,25 @@ export default function Register() {
               type="tel"
               name="user_phone"
               placeholder="Your Phone Number"
-              className="w-full border border-gray-300 rounded-full py-3 px-5 focus:outline-none focus:border-[#890B3Remember]"
+              className="w-full border border-gray-300 rounded-full py-3 px-5 focus:outline-none focus:border-[#890BRemember]"
               required
               disabled={status !== "idle"}
             />
           </div>
 
-          {/* --- NEW CHECKBOX BLOCK --- */}
+          {/* --- NEW CHECKBOX BLOCK (MANDATORY) --- */}
           <div className="flex items-start gap-3">
             <input
               type="checkbox"
               id="consent"
-              name="consent"
+              name="consent_show_only" // Name is given so 'required' works
               className="w-4 h-4 text-[#890B31] bg-gray-100 border-gray-300 rounded focus:ring-[#890B31] mt-1 shrink-0"
-              required
+              required // This makes it mandatory
               disabled={status !== "idle"}
             />
             <label htmlFor="consent" className="text-gray-700 text-sm">
-              I consent to receive event updates from CREDAI FairPro team.
+              I consent to receive event updates and VIP pass communication from
+              the CREDAI FairPro team.
             </label>
           </div>
           {/* --- END OF NEW BLOCK --- */}
