@@ -1,3 +1,4 @@
+import { Suspense } from "react"; // <-- 1. Import Suspense
 import AboutCredai from "@/components/About";
 import Attend from "@/components/Attend";
 import Discover from "@/components/Discover";
@@ -15,7 +16,10 @@ export default function Home() {
     <div className="">
       <Herosection />
       <Scroll />
-      <Register />
+      {/* 2. Wrap the Register component in Suspense */}
+      <Suspense fallback={null}>
+        <Register />
+      </Suspense>
       <Opportunities />
       <Trust />
       <Discover />

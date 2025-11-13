@@ -164,6 +164,22 @@ export default function Register() {
             />
           </div>
 
+          {/* --- NEW CHECKBOX BLOCK --- */}
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              className="w-4 h-4 text-[#890B31] bg-gray-100 border-gray-300 rounded focus:ring-[#890B31] mt-1 shrink-0"
+              required
+              disabled={status !== "idle"}
+            />
+            <label htmlFor="consent" className="text-gray-700 text-sm">
+              I consent to receive event updates from CREDAI FairPro team.
+            </label>
+          </div>
+          {/* --- END OF NEW BLOCK --- */}
+
           <input type="hidden" name="utmsource" value={utmSource || "N/A"} />
 
           <p className="text-gray-600 text-xs sm:text-sm text-center">
