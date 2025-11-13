@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FiSend } from "react-icons/fi";
 import { MdLocationOn } from "react-icons/md";
 import React, { useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 // Optional: declare gtag conversion function
 declare global {
@@ -15,16 +16,21 @@ declare global {
 export default function Register() {
   const form = useRef<HTMLFormElement>(null);
 
+  // Get URL search parameters
+  const searchParams = useSearchParams();
+  // Get the 'utmsource' parameter, default to "N/A" if not found
+  const utmSource = searchParams.get("utmsource");
+
   const [status, setStatus] = useState<
     "idle" | "submitting" | "sent" | "error"
   >("idle");
 
+  // --- THIS FUNCTION HAS BEEN UPDATED ---
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (status !== "idle" || !form.current) return;
 
     setStatus("submitting");
-
     const formData = new FormData(form.current);
 
     try {
@@ -46,15 +52,25 @@ export default function Register() {
         form.current.reset();
         setTimeout(() => setStatus("idle"), 3000);
       } else {
-        throw new Error(data.message || "Google Script returned an error");
+        // This is the new, improved error handling
+        // It will look for the specific error from the Google Script
+        const errorMessage =
+          data.error ||
+          data.message ||
+          data.raw ||
+          "Google Script returned an unknown error";
+        throw new Error(errorMessage);
       }
-    } catch (error) {
-      console.error("❌ Failed to submit:", error);
+    } catch (error: any) {
+      // This will now log the *specific* error message
+      console.error("❌ Failed to submit:", error.message);
       setStatus("error");
-      alert("Submission failed. Please try again.");
+      // alert("Submission failed. Please try again."); // Replaced alert with console log
+      console.error("Submission failed. Please try again. See error above.");
       setTimeout(() => setStatus("idle"), 3000);
     }
   };
+  // ----------------------------------------
 
   const getButtonText = () => {
     switch (status) {
@@ -96,6 +112,7 @@ export default function Register() {
           width={200}
           height={200}
           className="w-full lg:w-150 h-auto"
+          loading="eager"
         />
       </div>
 
@@ -141,11 +158,13 @@ export default function Register() {
               type="tel"
               name="user_phone"
               placeholder="Your Phone Number"
-              className="w-full border border-gray-300 rounded-full py-3 px-5 focus:outline-none focus:border-[#890B31]"
+              className="w-full border border-gray-300 rounded-full py-3 px-5 focus:outline-none focus:border-[#890B3Remember]"
               required
               disabled={status !== "idle"}
             />
           </div>
+
+          <input type="hidden" name="utmsource" value={utmSource || "N/A"} />
 
           <p className="text-gray-600 text-xs sm:text-sm text-center">
             I agree to the{" "}

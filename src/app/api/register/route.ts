@@ -2,20 +2,21 @@ export async function POST(request: Request) {
   try {
     const formData = await request.formData();
 
-    // Prepare data for Google Apps Script
     const params = new URLSearchParams();
     params.append("user_name", formData.get("user_name") as string);
     params.append("user_email", formData.get("user_email") as string);
     params.append("user_phone", formData.get("user_phone") as string);
+    params.append("utmsource", formData.get("utmsource") as string);
 
-    // ✅ Your Google Apps Script Web App URL
     const SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbyaAlwC5ja1OUlOxnvB9j4jK1TnsiC8sGpLrmVTsx8-y2UFcSKJGSYVWKTkzHfmeXXGqA/exec";
+      "https://script.google.com/macros/s/AKfycbznKVf9QUBNVel3_PZj_kQ-BOe-T6kads83lBAmzR_7lXLP0lDWqxIk8ebqvT42Lrvq/exec";
 
-    // Send POST request to Google Script
     const res = await fetch(SCRIPT_URL, {
       method: "POST",
-      body: params,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded", // ✅ Important
+      },
+      body: params.toString(), // ✅ Convert URLSearchParams to string
     });
 
     const text = await res.text();
