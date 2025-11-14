@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
     // --- THIS IS YOUR NEW, UPDATED URL ---
     const SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbzjOms_XnFGPSovCETS2CVnVa_fc6VssioPQSVWlkDC2zgXdOg3hUltLAsmiFJOsoNBVg/exec";
+      "https://script.google.com/macros/s/AKfycbxNo_FNrdT-jNhB16ui5TagKvtLvYfJI4ZBPVE1xrbLI7baoeKBqjDzaztVRSf5ITOf7Q/exec";
     // -------------------------------------
 
     const res = await fetch(SCRIPT_URL, {
